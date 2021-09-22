@@ -1,27 +1,17 @@
 #python kalkulacka
-a=str(input('Zadaj priklad: '))
+a=str('13+3+6')
+a=a.strip()
+#pozicia znamienka == pos
+pos=0
 
-znamienka=[
-    a.find('+'),
-    a.find('-'),
-    a.find('*'),
-    a.find('/'),
-    ]
-def poloha(s, num):
-    return int(s[:num]), int(s[num+1:])
+znamienka=[]
+cisla=[]
 
-if znamienka[0]>0:
-    x,y=poloha(a, znamienka[0])
-    print(x+y)
-
-if znamienka[1]>0:
-    x,y=poloha(a, znamienka[1])
-    print(x-y)
-
-if znamienka[2]>0:
-    x,y=poloha(a, znamienka[2])
-    print(x*y)
-
-if znamienka[3]>0:
-    x,y=poloha(a, znamienka[3])
-    print(x/y)
+for i in range (0, int(len(a))):
+    if a[i] in '+-*/'== True:
+        znamienka.append(a[])
+        cisla.append(a[pos:i])
+        pos=i+1
+cisla.append(a[pos:])
+print(cisla)
+print(znamienka)
